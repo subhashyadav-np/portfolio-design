@@ -1,0 +1,141 @@
+/* Adding Offline Fonts */
+
+@font-face{
+    font-family: "Alliens";
+    src: url(fonts/Alliens-Personal-Use-Only.otf);
+}
+
+@font-face{
+    font-family: "Blacklet";
+    src: url(fonts/Blacklet.ttf);
+}
+
+@font-face{
+    src: url(fonts/Bourbon-whiskey.otf);
+    font-family: "Bourbon whiskey";
+}
+
+@font-face{
+    src: url(fonts/Broken.otf);
+    font-family: "Broken";
+}
+
+@font-face{
+    src: url(fonts/Dark-Seed.otf);
+    font-family: "Dark Seed";
+}
+
+@font-face{
+    src: url(fonts/DEAD-ATTACK.ttf);
+    font-family: "DEAD ATTACK";
+}
+
+@font-face{
+    src: url(fonts/Dearest.ttf);
+    font-family: "Dearest";
+}
+
+@font-face{
+    src: url(fonts/GuldScriptColor_PERSONAL_USE_ONLY.ttf);
+    font-family: "GuldScriptColor";
+}
+
+@font-face{
+    src: url(fonts/HARD-STREET.ttf);
+    font-family: "HARD STREET";
+}
+
+@font-face{
+    src: url(fonts/Heaters.otf);
+    font-family: "Heaters";
+}
+
+@font-face{
+    src: url(fonts/High-Beasty.ttf);
+    font-family: "High Beasty";
+}
+
+@font-face{
+    src: url(fonts/magic-love.ttf);
+    font-family: "Magic Love";
+}
+
+@font-face{
+    src: url(fonts/Orange-Blossom.ttf);
+    font-family: "Orange Blossom";
+}
+
+@font-face{
+    src: url(fonts/Relieve-Demo.ttf);
+    font-family: "Relive Demo";
+}
+
+@font-face{
+    src: url(fonts/Samble-Tracie-Bold.otf);
+    font-family: "Samble Tracie Bold";
+}
+
+@font-face{
+    src: url(fonts/Samble-Tracie-Bold.ttf);
+    font-family: "Samble Tracie Bold";
+}
+
+@font-face{
+    src: url(fonts/Samble-Tracie-Swash.otf);
+    font-family: "Samble Tracie Swash";
+}
+
+@font-face{
+    src: url(fonts/Samble-Tracie-Swash.ttf);
+    font-family: "Samble Tracie Swash";
+}
+
+@font-face{
+    src: url(fonts/Samble-Tracie-Swash-Bold.otf);
+    font-family: "Samble Tracie Swash Bold";
+}
+
+@font-face{
+    src: url(fonts/Samble-Tracie-Swash-Bold.ttf);
+    font-family: "Samble Tracie Swash Bold";
+}
+
+@font-face{
+    src: url(fonts/Samble-Tracie.otf);
+    font-family: "Samble Tracie";
+}
+
+@font-face{
+    src: url(fonts/Samble-Tracie.ttf);
+    font-family: "Samble Tracie";
+}
+
+@font-face{
+    src: url(fonts/School-Mania.ttf);
+    font-family: "School Mania";
+}
+
+@font-face{
+    src: url(fonts/Serif-Sketch.ttf);
+    font-family: "Serif Sketech";
+}
+
+@font-face{
+    src: url(fonts/The-Manaline-Font.ttf);
+    font-family: "The Manaline Font";
+}
+
+@font-face{
+    src: url(fonts/Victorian-Art-Magic-Remains.ttf);
+    font-family: "Victorian Art Magic Remains";
+}
+
+@font-face{
+    src: url(fonts/ZEBRA.ttf);
+    font-family: "ZEBRA";
+}
+
+@font-face{
+    src: url(fonts/ZOMBIES-NIGHT.ttf);
+    font-family: "ZOMBIES NIGHT";
+}

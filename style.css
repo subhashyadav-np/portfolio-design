@@ -1,0 +1,989 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background: radial-gradient(rgb(88, 151, 151), #dce2dc);
+}
+
+section{
+    padding: 6rem 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*Navigation Bar And Page Start*/
+.menu-toggler{
+    position: fixed;
+    top: 4rem;
+    right: 4rem;
+    width: 4rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1500;
+    transition: transform 650ms ease-out;
+}
+
+.menu-toggler.open{
+    transform: rotate(-45deg);
+}
+
+.bar{
+    background: linear-gradient(45deg,rgb(255, 123, 0), rgb(255, 0, 212));
+    width: 100%;
+    height: 8px;
+    border-radius: .8rem;
+}
+
+.bar.half{
+    width: 50%;
+}
+
+.bar.start{
+    transform-origin: right;
+    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+
+.open .bar.start{
+    transform: rotate(-450deg) translateX(.8rem);
+}
+
+.bar.end{
+    transform-origin: left;
+    align-self: flex-end;
+    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+
+.open .bar.end{
+    transform: rotate(-450deg) translateX(-.8rem);
+}
+
+.top-nav{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: -200vh;
+    z-index: 50;
+    background-color: teal;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    transition: all 650ms cubic-bezier(1,0,0,1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: "Dark Seed";
+}
+
+.nav-list{
+    list-style: none;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.nav-list li{
+    margin: 0 1.5rem;
+}
+
+.nav-link{
+    color: #fff;
+    text-decoration: none;
+    font-size: 35px;
+    padding: .5rem;
+    letter-spacing: 2px;
+}
+
+.nav-link:hover,
+.nav-link:focus{
+    color: yellow;
+    text-shadow: 0 0 5px yellow, 0 0 30px yellow;
+}
+
+.top-nav.open{
+    top: 0;
+    border-radius: initial;
+}
+/*Navigation Bar And Page End*/
+
+
+/*HomePage Start*/
+header{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background: url(img/subhash-bg.jpg) center;
+    background-size: cover;
+    background-attachment: fixed;
+    border: 3px solid teal;
+}
+
+.header-box{
+    position: absolute;
+    width: 90%;
+    height: 100vh;
+}
+
+.landing-text{
+    margin-top: 15%;
+    margin-left: 80px;
+}
+
+.landing-text h1{
+    width: fit-content;
+    background: linear-gradient(to top, black, teal);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 95px;
+    font-family: "School Mania";
+    font-weight: 300;
+    user-select: none;
+    letter-spacing: 1px;
+    transition: ease-in all .4s;
+    
+}
+
+.landing-text h1:hover{
+    padding-left: 10px;
+    
+}
+
+.landing-text p{
+    font-size: 45px;
+    width: fit-content;
+    font-family: "The Manaline Font";
+    letter-spacing: 5px;
+    user-select: none;
+    transition: ease-in all .4s;
+    text-shadow: 0 0 10px rgb(255, 255, 0);
+}
+
+.landing-text p:hover{
+    padding-left: 10px;
+}
+
+.landing-text p span:nth-child(1){
+    color: green;
+}
+
+.landing-text p span:nth-child(2){
+    color: red;
+}
+
+.landing-text p span:nth-child(3){
+    color: rgb(0, 17, 252);
+}
+
+.landing-text p span:nth-child(4){
+    color: rgb(250, 116, 6);
+}
+
+.landing-text button{
+    margin-top: 30px;
+    height: 40px;
+    width: 200px;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-family: "Dark Seed";
+    cursor: pointer;
+    transition: ease-in all .4s;
+    box-shadow: 0 0 5px white;
+    outline: none;
+}
+
+.btn-hire-me{
+    border: 4px solid teal;
+    background-color: teal;
+    color: #fff;
+}
+
+.btn-portfolio{
+    border: 4px solid teal;
+    color: teal;
+    margin-left: 25px;
+}
+
+.btn-hire-me:hover,
+.btn-portfolio:hover{
+    background-color: rgb(241, 5, 162);
+    color: #fff;
+    border: 4px solid rgb(241, 5, 162);
+    box-shadow: 0 0 5px rgb(241, 5, 162), 0 0 30px rgb(241, 5, 162);
+}
+
+/*HomePage End*/
+
+
+/*Start Reusable*/
+.container{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section-heading{
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.section-heading h1{
+    font-size: 5rem;
+    color: rgba(255, 255, 255, .3);
+    font-weight: 400;
+    position: relative;
+    margin-bottom: 1rem;
+    font-family: "The Manaline Font";
+    user-select: none;
+}
+
+.section-heading h1::before{
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 20px;
+    width: 220px;
+    border-radius: 0 50px 0 50px;
+    background: rgba(255, 255, 255, .2);
+}
+
+.section-heading h6{
+    font-family: sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-top: -17px;
+    user-select: none;
+}
+/*End Reusable*/
+
+
+/*About Start*/
+.about-box{
+    display: flex;
+}
+
+.about-img{
+    height: 250px;
+    width: 250px;
+}
+
+.about-img img{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px ;
+}
+
+.about-detail p{
+    font-family: "Serif Sketech";
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.social-container{
+    margin-top: 20px;
+}
+.social-container a{
+    font-size: 30px;
+    padding: 6px 6px;
+    cursor: pointer;
+}
+
+.social-container a i{
+    padding-right: 4px;
+    padding-left: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 4px;
+    transition: all ease .5s;
+}
+.social-container a i:hover{
+    color: #fff;
+}
+.fa-facebook-square{
+    color: blue;
+}
+.fa-facebook-square:hover{
+    background: blue;
+}
+.fa-instagram-square{
+    color: rgb(231, 31, 231);
+}
+.fa-instagram-square:hover{
+    background: rgb(231, 31, 231);
+}
+.fa-twitter-square{
+    color: teal;
+}
+.fa-twitter-square:hover{
+    background: teal;
+}
+.fa-git-square{
+    color: black;
+}
+.fa-git-square:hover{
+    background: black;
+}
+.fa-youtube-square{
+    color: red;
+}
+.fa-youtube-square:hover{
+    background: red;
+}
+/*About End*/
+
+
+/*Start Services*/
+.my-skills{
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 2.5rem;
+    text-align: center;
+}
+
+.skill{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.skill h1{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 2rem -2px 2rem 0px;
+    font-family: "Dark Seed";
+    color: rgba(0, 0, 0, 0.726);
+	text-shadow: 0 0 5px yellow;
+}
+
+.icon-container{
+    width: 10rem;
+    height: 10rem;
+    border: 3px solid #ffe838;
+    background: linear-gradient(45deg, rgba(135, 213, 233, 0.849), teal);
+    margin-bottom: 2rem;
+    display: flex;
+    transform: rotate(45deg);
+    box-shadow: 0 0 5px yellow, 0 0 15px yellow;
+}
+
+.icon-container i{
+    color: #ffe838;
+    font-size: 80px;
+    margin: auto;
+    transform: rotate(-45deg);
+}
+
+.skill p{
+    font-family: "Serif Sketech";
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+/*End Services*/
+
+
+
+
+/*Portfolio Start*/
+.title-and-break{
+    width: 100%;
+    border-bottom: 4px solid rgb(255, 115, 0);
+    margin-top: 2.5rem;
+}
+
+.tab-right{
+    margin-top: 100px;
+    border-bottom: 4px solid teal;
+}
+
+.title{
+    height: 30px;
+    width: 170px;
+    border-radius: 0 90px 0 0;
+    background: rgb(255, 115, 0);
+    font-size: 22px;
+    font-family: "Dark Seed";
+    padding: 5px 10px;
+}
+
+.title-right{
+    position: absolute;
+    right: 0;
+    border-radius: 0 0 0 90px;
+    text-align: end;
+    height: 35px;
+    background: teal;
+    color: #fff;
+}
+.portfolio-items{
+    margin-top: 3.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 2.5rem;
+    text-align: center;
+}
+
+.port-item-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid teal;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 0 5px teal;
+}
+
+.port-img{
+    height: 180px;
+    width: 100%;
+    border-bottom: 2px solid teal;
+    overflow: hidden;
+}
+
+.port-img img{
+    min-height: 100%;
+    max-width: 100%;
+    cursor: pointer;
+    transition: all .4s ease;
+    z-index: 2;
+}
+
+.port-img:hover img{
+    min-height: 105%;
+    max-width: 105%;
+    margin-left: -10px;
+    margin-top: -5px;
+    filter: grayscale(50%);
+}
+
+.port-item-div h3{
+    padding: 5px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    color: teal;
+}
+
+.client-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.267);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.client-img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 5px;
+}
+.client-img img{
+    height: 100px;
+    width: 100px;
+    opacity: .9;
+}
+
+.client-div h2{
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.726);
+    letter-spacing: 1px;
+}
+
+.client-div p{
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.726);
+}
+
+.client-div .rating{
+    margin-top: 10px;
+    color: teal;
+}
+/*Portfolio End*/
+
+
+
+
+/*Start timeline*/
+.timeline ul{
+    border-left: 3px solid teal;
+    border-radius: .8rem;
+    background-color: rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+    position: relative;
+    padding: 5rem;
+    list-style: none;
+    text-align: left;
+    width: 70%;
+}
+
+.timeline h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    opacity: 0.3;
+    font-family: "Dark Seed";
+    letter-spacing: 1px;
+}
+
+.timeline .date{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+.timeline .date:last-of-type{
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border: none;
+}
+
+.timeline .date::before,
+.timeline .date::after{
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.timeline .date::before{
+    content: attr(data-date);
+    left: -19rem;
+    text-align: right;
+    min-width: 12rem;
+    font-family: sans-serif;
+    margin-top: 12px;
+}
+
+.timeline .date::after{
+    content: '';
+    box-shadow: 0 0 0 4px teal;
+    transform: rotate(45deg);
+    left: -5.9rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #313537;
+}
+/*End timeline*/
+
+/*Start Experience bar*/
+.exp-bar-main{
+    margin-top: 60px;
+    width: 100%;
+    background-color: #221e3f2c;
+    padding: 50px;
+    border-radius: 8px;
+}
+
+.exp-bar-main h1{
+    text-align: center;
+    font-family: "The Manaline Font";
+    font-size: 45px;
+	color: rgba(255, 255, 255, 0.5);
+    padding-bottom: 20px;
+	letter-spacing: 4px;
+}
+
+.exp-bar-main h1::after{
+    content: "%";
+    position: absolute;
+	font-family: sans-serif;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 20px;
+    width: 30px;
+    color: #111;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+}
+
+.exp-bar{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.progress-box{
+    margin: 10px;
+    position: relative;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2) ,0 0 5px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.progress-box:hover,
+.progress-box:focus{
+    box-shadow: 0 0 5px #fff, 0 0 30px yellow;
+}
+
+.progress-box .progress-percent{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.progress-box .progress-percent svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.progress-box .progress-percent svg circle{
+    width: 150px;
+    height: 150px;
+    fill: none;
+    stroke-width: 10;
+    stroke: #000;
+    transform: translate(5px,5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    stroke-linecap: round;
+}
+
+.progress-box .progress-percent svg circle:nth-child(1){
+    stroke-dashoffset: 0;
+    stroke: #f0ebeb;
+}
+
+.progress-box .progress-percent svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * var(--bar-percent, 0)) / 100);
+    stroke: #03a9f4;
+}
+
+.progress-box .progress-percent .progress-percent-number{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.726);
+}
+
+.progress-box .progress-percent .progress-percent-number h2{
+    font-size: 48px;
+}
+.progress-box .progress-percent .progress-percent-number h2 span{
+    font-size: 24px;
+}
+.progress-box .progress-title{
+    padding: 10px 0 0;
+    color: rgba(0, 0, 0, 0.726);
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+/*End Experience Bar*/
+
+
+
+
+/*Start contact*/
+.contact{
+    background-color: #221e3f5e;
+}
+
+.contact form{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact form label{
+    margin: 8px 0;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+}
+
+.contact form input[type=text],
+.contact form input[type=email],
+.contact form select{
+    height: 35px;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+    font-size: 18px;
+    color: teal;
+    background: rgba(255, 255, 255, .3);
+    letter-spacing: 1px;
+    font-family: initial;
+}
+
+.contact form input[type=text]:focus,
+.contact form input[type=email]:focus,
+.contact form select:focus{
+    background: rgba(255, 255, 255, 0.699);
+}
+
+.contact form textarea{
+    border-radius: 5px;
+    outline: none;
+    font-size: 18px;
+    padding:5px;
+    color: teal;
+    background: rgba(255, 255, 255, .3);
+    letter-spacing: 1px;
+    font-family: initial;
+}
+
+.contact form textarea:focus{
+    background: rgba(255, 255, 255, 0.699);
+}
+
+.contact form input[type=submit]{
+    margin-top: 30px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 5px yellow;
+    background: linear-gradient(45deg,rgb(255, 123, 0), rgb(255, 0, 212));
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-family: "Dark Seed";
+    color: #fff;
+    cursor: pointer;
+    transition: all ease-in .4s;
+}
+.contact form input[type=submit]:hover{
+    box-shadow: 0 0 5px yellow, 0 0 30px yellow;
+}
+/*End contact*/
+
+
+/*Start footer*/
+.copyright{
+    width: 100%;
+    text-align: center;
+    background-color: teal;
+    padding: 2rem 0;
+    position: relative;
+}
+
+.up{
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    background-color: #eee;
+    top: -2.5rem;
+    right: 5rem;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    animation: pulse 2s infinite;
+    cursor: pointer;
+}
+
+.up i{
+    font-size: 45px;
+    margin: auto;
+    background: linear-gradient(45deg,rgb(255, 123, 0), rgb(255, 0, 212));
+    -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+.copyright p{
+    font-size: 25px;
+    font-family: "Serif Sketech";
+}
+/*End footer*/
+
+
+
+
+/*Start animations*/
+@keyframes pulse {
+    0%{
+        box-shadow: 0 0 0 0 rgba(253, 87, 191, 0.99);
+    }
+    70%{
+        box-shadow: 0 0 0 2rem rgba(253, 87, 191, 0);
+    }
+    100%{
+        box-shadow: 0 0 0 0 rgba(253, 87, 191, 0);
+    }
+}
+/*End animations*/
+
+
+
+/*Responsive Start*/
+@media screen and (max-width: 768px) {
+    body{
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+    }
+
+    .menu-toggler{
+        top: 3rem;
+        right: 3rem;
+    }
+
+    .nav-list{
+        flex-direction: column;
+    }
+
+    .nav-list li{
+        margin: 1rem 0;
+    }
+
+    .nav-link{
+        font-size: 3rem;
+    }
+
+    .landing-text{
+        margin-top: 33%;
+        margin-left: 40px;
+    }
+
+    .landing-text h1{
+        font-size: 65px;
+    }
+
+    .landing-text p{
+        font-size: 35px;
+    }
+    .about-box{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .timeline ul{
+        margin: 0 0 0 auto;
+        padding: 30px;
+    }
+
+    .timeline .date::before{
+        left: -16rem;
+    }
+
+    .timeline .date::after{
+        left: -2.7rem;
+    }
+    .exp-bar div progress{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    header{
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        background: url(img/subhash-bg1.jpg) center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .menu-toggler{
+        top: 2rem;
+        right: 2rem;
+    }
+    .nav-link{
+        font-size: 2rem;
+    }
+    .container{
+        width: 94%;
+    }
+    .landing-text{
+        display: flex;
+        flex-direction: column;
+        margin-top: 50%;
+    }
+    .landing-text h1{
+        padding-bottom: 10px;
+        font-size: 50px;
+        background: linear-gradient(45deg, rgb(252, 11, 232), teal);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .landing-text p{
+        padding-bottom: 20px;
+        font-size: 28px;
+    }
+    .landing-text button{
+        margin-top: initial;
+    }
+    .btn-portfolio{
+        margin-left: initial;
+    }
+    .section-heading h1{
+        font-size: 3.5rem;
+    }
+    .timeline h1{
+        font-size: 15px;
+    }
+    .timeline ul{
+        margin: 0 0 0 auto;
+        padding: 15px;
+    }
+    .timeline .date::before{
+        left: -14.7rem;
+        font-size: 13px;
+    }
+    .timeline .date::after{
+        left: -1.9rem;
+    }
+    .timeline p{
+        font-size: 18px;
+    }
+    .exp-bar-main{
+        width: 100%;
+    }
+    .exp-bar div{
+        flex-direction: column;
+    }
+    .exp-bar div progress{
+        width: 100%;
+    }
+
+    .contact form{
+        width: 90%;
+    }
+    .up{
+        right: 2rem;
+        top: -2rem;
+        width: 4rem;
+        height: 4rem;
+    }
+
+}
+/*Responsive End*/
